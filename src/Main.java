@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        var boxerWeight1 = 78.2;
-        var boxerWeight2 = 82.7;
-        System.out.println(boxerWeight2 % boxerWeight1);
+        var hoursOfWork = 640;
+        var hoursOnWork = 8;
+        var people = hoursOfWork / hoursOnWork;
+        System.out.println("Всего работников в компании - " + people + " человек");
     }
 }
