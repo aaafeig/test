@@ -1,11 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        float something = 27.12f;
-        long things = 987678965549L;
-        short apples = 2786;
-        short numberPos = 569;
-        short numbersNeg = -159;
-        short cars = 27897;
-        byte students = 67;
+        short studentsLud = 23;
+        short studentsAnna = 27;
+        short studentsEkaterine = 30;
+        short papers = 480;
+        System.out.println("На каждого ученика рассчитано " + papers / (studentsAnna + studentsEkaterine + studentsLud) + " листов бумаги");
     }
 }
