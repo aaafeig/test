@@ -1,9 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        short studentsLud = 23;
-        short studentsAnna = 27;
-        short studentsEkaterine = 30;
-        short papers = 480;
-        System.out.println("На каждого ученика рассчитано " + papers / (studentsAnna + studentsEkaterine + studentsLud) + " листов бумаги");
+    byte bottles = 16;
+    byte minutes = 2;
+    System.out.println("За 20 минут машина произвела " + bottles / minutes * 20 + " штук бутылок");
+    System.out.println("За сутки машина произвела " + bottles / minutes * 1440 + " штук бутылок");
+    System.out.println("За 3 сутка машина произвела " + (bottles / minutes * 1440) * 3 + " штук бутылок");
+        System.out.println("За месяц машина произвела " + ((bottles / minutes * 1440) * 3) * 30 + " штук бутылок");
+
     }
 }
