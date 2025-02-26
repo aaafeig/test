@@ -1,59 +1,49 @@
 public class Main {
     public static void main(String[] args) {
     // 1
-    byte clientOS = 0;
-    if (clientOS == 0)
-        System.out.println("Установите версию приложения для iOS по ссылке");
-    else
-        System.out.println("Установите версию приложения для Android по ссылке");
-    //2
-    short clientDeviceYear = 2015;
-    if (clientOS == 0 && clientDeviceYear < 2015)
-        System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-    else if (clientOS == 0 && clientDeviceYear >= 2015)
-        System.out.println("Установите версию приложения для iOS по ссылке");
-    else if (clientOS == 1 && clientDeviceYear < 2015)
-        System.out.println("Установите облегченную версию приложения для Android по ссылке");
-    else
-        System.out.println("Установите версию приложения для Android по ссылке");
+    for (int i = 1; i <= 10; i++ ){
+        System.out.println(i);
+    }
+    // 2
+    for (int i = 10; i != 0; i--){
+        System.out.println(i);
+    }
     // 3
-    short year = 1600;
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
-        System.out.println(year + " год является високосным");
-    else
-        System.out.println(year + " год не является високосным");
-    //4
-    int deliveryDistance = 95;
-    short countDays = 0;
-    if (deliveryDistance <= 20)
-        countDays = 1;
-    else if (deliveryDistance > 20 && deliveryDistance <= 60)
-        countDays = 2;
-    else if (deliveryDistance > 60 && deliveryDistance <= 100)
-        countDays = 3;
-    else if (deliveryDistance > 100)
-        System.out.println("Доставки нет");
-
-    System.out.println("Потребуется дней: " + countDays);
+    for (int i = 0; i <= 17; i += 2){
+        System.out.println(i);
+    }
+    // 4
+    for (int i = 10; i != -11; i--){
+        System.out.println(i);
+    }
     // 5
-    byte monthNumber = 13;
-    if (monthNumber <= 12)
-        switch (monthNumber) {
-            case 1, 2, 12:
-                System.out.println("Зима");
-                break;
-            case 3, 4, 5:
-                System.out.println("Весна");
-                break;
-            case 6, 7, 8:
-                System.out.println("Лето");
-                break;
-            case 9, 10, 11:
-                System.out.println("Осень");
-                break;
-        }
-    else
-        System.out.println("Введите корректный номер месяца");
-
+    for (int i = 1904; i <= 2096; i += 4){
+        if ( i % 100 != 0 || i % 400 == 0)
+            System.out.println(i + " год является високосным");
+    }
+    // 6
+    for (int i = 7; i <= 98; i += 7){
+        System.out.println(i);
+    }
+    // 7
+    for (int i = 1; i <= 512; i *= 2){
+        System.out.println(i);
+    }
+    // 8
+    int count = 0;
+    for (int i = 1; i <= 12; i++){
+        count += 29000;
+        System.out.println("Месяц " + i + " , сумма накоплений равна " + count + " рублей");
+    }
+    // 9
+    int total = 0;
+    for (int i = 1; i <= 12; i++){
+        total += 29000 + (29000 * 12/100);
+        System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей");
+    }
+    // 10
+    for (int i = 1; i <= 10; i++){
+        System.out.println("2*"+i+"="+2*i);
+    }
     }
 }
