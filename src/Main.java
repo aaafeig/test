@@ -1,13 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-    // 1 and 2
-    byte clientOC = 0;
-    short yearOfRelease = 2025;
-    if (clientOC == 0 && yearOfRelease < 2015)
-        System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-    else if (clientOC == 0 && yearOfRelease >= 2015)
+    // 1
+    byte clientOS = 0;
+    if (clientOS == 0)
         System.out.println("Установите версию приложения для iOS по ссылке");
-    else if (clientOC == 1 && yearOfRelease < 2015)
+    else
+        System.out.println("Установите версию приложения для Android по ссылке");
+    //2
+    short clientDeviceYear = 2015;
+    if (clientOS == 0 && clientDeviceYear < 2015)
+        System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+    else if (clientOS == 0 && clientDeviceYear >= 2015)
+        System.out.println("Установите версию приложения для iOS по ссылке");
+    else if (clientOS == 1 && clientDeviceYear < 2015)
         System.out.println("Установите облегченную версию приложения для Android по ссылке");
     else
         System.out.println("Установите версию приложения для Android по ссылке");
@@ -31,21 +36,24 @@ public class Main {
 
     System.out.println("Потребуется дней: " + countDays);
     // 5
-    byte monthNumber = 12;
-    switch (monthNumber){
-        case 1, 2, 12:
-            System.out.println("Зима");
-            break;
-        case 3, 4, 5:
-            System.out.println("Весна");
-            break;
-        case 6, 7, 8:
-            System.out.println("Лето");
-            break;
-        case 9, 10, 11:
-            System.out.println("Осень");
-            break;
-    }
+    byte monthNumber = 13;
+    if (monthNumber <= 12)
+        switch (monthNumber) {
+            case 1, 2, 12:
+                System.out.println("Зима");
+                break;
+            case 3, 4, 5:
+                System.out.println("Весна");
+                break;
+            case 6, 7, 8:
+                System.out.println("Лето");
+                break;
+            case 9, 10, 11:
+                System.out.println("Осень");
+                break;
+        }
+    else
+        System.out.println("Введите корректный номер месяца");
 
     }
 }
