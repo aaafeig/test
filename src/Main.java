@@ -38,7 +38,7 @@ public class Main {
     // 9
     int total = 0;
     for (int i = 1; i <= 12; i++){
-        total += 29000 + (29000 * 12/100);
+        total += 29000 + (29000 * 1/100);
         System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей");
     }
     // 10
