@@ -79,6 +79,13 @@ public class Main {
             }
         }
         // 8
-
+        int thisYear = 2025;
+        int comet = 79;
+        while (comet < thisYear + 100){
+            comet += 79;
+            if (comet > thisYear - 200 && comet < thisYear + 100){
+                System.out.println(comet);
+            }
+        }
     }
 }
