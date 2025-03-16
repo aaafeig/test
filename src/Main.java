@@ -1,49 +1,67 @@
 public class Main {
     public static void main(String[] args) {
-        // 1
-    for (int i = 1; i <= 10; i++ ){
-        System.out.println(i);
-    }
+    // 1
+    int[] numbers = new int[3];
+    numbers[0] = 1;
+    numbers[1] = 2;
+    numbers[2] = 3;
+    float[] floatNumbers = {1.57f, 7.654f, 9.986f};
+    int[] myNumbers = {56, 78, 14};
     // 2
-    for (int i = 10; i != 0; i--){
-        System.out.println(i);
-    }
+        for (int number : numbers) {
+            System.out.print(number);
+            if (number != numbers[numbers.length - 1]) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("\n");
+        for (float floatNumber : floatNumbers) {
+            System.out.print(floatNumber);
+            if (floatNumber != floatNumbers[floatNumbers.length - 1]) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("\n");
+        for (int myNumber : myNumbers) {
+            System.out.print(myNumber);
+            if (myNumber != myNumbers[myNumbers.length - 1]) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("\n");
     // 3
-    for (int i = 0; i <= 17; i += 2){
-        System.out.println(i);
-    }
-    // 4
-    for (int i = 10; i != -11; i--){
-        System.out.println(i);
-    }
-    // 5
-    for (int i = 1904; i <= 2096; i += 4){
-        if ( i % 100 != 0 || i % 400 == 0)
-            System.out.println(i + " год является високосным");
-    }
-    // 6
-    for (int i = 7; i <= 98; i += 7){
-        System.out.println(i);
-    }
-    // 7
-    for (int i = 1; i <= 512; i *= 2){
-        System.out.println(i);
-    }
-    // 8
-    int count = 0;
-    for (int i = 1; i <= 12; i++){
-        count += 29000;
-        System.out.println("Месяц " + i + " , сумма накоплений равна " + count + " рублей");
-    }
-    // 9
-    int total = 0;
-    for (int i = 1; i <= 12; i++){
-        total += 29000 + (29000 * 1/100);
-        System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей");
-    }
-    // 10
-    for (int i = 1; i <= 10; i++){
-        System.out.println("2*"+i+"="+2*i);
-    }
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("\n");
+       for (int i = floatNumbers.length - 1; i >= 0; i--) {
+           System.out.print(floatNumbers[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+       }
+        System.out.print("\n");
+        for (int i = myNumbers.length - 1; i >= 0; i--) {
+            System.out.print(myNumbers[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("\n");
+        // 4
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 != 0){
+                numbers[i] += 1;
+            }
+        }
+        for (int number : numbers) {
+            System.out.print(number);
+            if (number != numbers[numbers.length - 1]) {
+                System.out.print(", ");
+            }
+        }
     }
 }
